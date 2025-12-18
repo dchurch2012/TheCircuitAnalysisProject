@@ -1,0 +1,52 @@
+----------------------------------------------------------------------------------
+V1
+GND      V_1     12      +
+GND      R1      1000    *
+V2       R2      3000    *
+V2       R3      1500    *
+------------------------------------------------------------------------
+V2
+GND      R4      4700    *
+V1       R2      1500    *
+V1       R3      3000    *
+V3       V_2     9       +
+------------------------------------------------------------------------
+V3
+GND      R5      800     *
+GND      R6      1500    *
+GND      R7      5000    *
+V2       V_2     9       -
+------------------------------------------------------------------------
+--------------------Processing Diagonal Elements----------------------------------------------------------------
+Node[ 0 ] Name :  V1
+GND  thru  V_1   col :  0        Node[ 0 ]       Value : 12
+GND  thru  R1    col :  0        Node[ 0 ]       Value : 1000
+V2  thru  R2     col :  0        Node[ 0 ]       Value : 3000
+V2  thru  R3     col :  0        Node[ 0 ]       Value : 1500
+Node[ 1 ] Name :  V2
+GND  thru  R4    col :  0        Node[ 1 ]       Value : 4700
+V1  thru  R2     col :  0        Node[ 1 ]       Value : 1500
+V1  thru  R3     col :  0        Node[ 1 ]       Value : 3000
+V3  thru  V_2    col :  0        Node[ 1 ]       Value : 9
+Node[ 2 ] Name :  V3
+GND  thru  R5    col :  0        Node[ 2 ]       Value : 800
+GND  thru  R6    col :  0        Node[ 2 ]       Value : 1500
+GND  thru  R7    col :  0        Node[ 2 ]       Value : 5000
+V2  thru  V_2    col :  0        Node[ 2 ]       Value : 9
+--------------------Processing Off Diagonal Elements------------------------------------------------------------
+Node  V1  Connects to
+GND  thru  V_1   Node[ 0 ]       Value : 12 index :  3
+GND  thru  R1    Node[ 0 ]       Value : 1000 index :  3
+V2  thru  R2     Node[ 0 ]       Value : 3000 index :  1
+V2  thru  R3     Node[ 0 ]       Value : 1500 index :  1
+Node  V2  Connects to
+GND  thru  R4    Node[ 1 ]       Value : 4700 index :  3
+V1  thru  R2     Node[ 1 ]       Value : 1500 index :  0
+V1  thru  R3     Node[ 1 ]       Value : 3000 index :  0
+V3  thru  V_2    Node[ 1 ]       Value : 9 index :  2
+Node  V3  Connects to
+GND  thru  R5    Node[ 2 ]       Value : 800 index :  3
+GND  thru  R6    Node[ 2 ]       Value : 1500 index :  3
+GND  thru  R7    Node[ 2 ]       Value : 5000 index :  3
+V2  thru  V_2    Node[ 2 ]       Value : 9 index :  1
+Sum Matrix :  [[5500, 4500, 0], [4500, 9200, 0], [0, 0, 7300]]
